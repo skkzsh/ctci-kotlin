@@ -1,6 +1,6 @@
 plugins {
     kotlin("jvm") version "1.8.0"
-    application
+//    application
 }
 
 group = "dev.skkzsh"
@@ -22,6 +22,6 @@ kotlin {
     jvmToolchain(8)
 }
 
-application {
-    mainClass.set("MainKt")
-}
+//application {
+//    mainClass.set("MainKt")
+//}
