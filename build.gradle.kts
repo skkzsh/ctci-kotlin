@@ -22,6 +22,11 @@ dependencies {
     testImplementation(kotlin("test"))
 }
 
+// 毎回最新を取得 (キャッシュを使わない)
+configurations.all {
+    resolutionStrategy.cacheChangingModulesFor(0, "hours")
+}
+
 tasks.test {
     useJUnitPlatform()
 }
