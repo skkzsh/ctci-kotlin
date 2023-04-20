@@ -9,21 +9,6 @@ class LinkedListNode02Test {
     @Test
     fun deleteDupsHash() {
         n.append(LinkedListNode02(101))
-        n.append(LinkedListNode02(100))
-        n.append(LinkedListNode02(102))
-
-        // n.print() // debug
-        n.deleteDupsHash()
-
-        // n.print() // debug
-        assertEquals(3, n.length())
-        assertEquals(100, n.at(0).value)
-        assertEquals(101, n.at(1).value)
-        assertEquals(102, n.at(2).value)
-    }
-
-    @Test
-    fun deleteDupsHash_Last() {
         n.append(LinkedListNode02(101))
         n.append(LinkedListNode02(102))
         n.append(LinkedListNode02(100))
@@ -37,24 +22,10 @@ class LinkedListNode02Test {
         assertEquals(101, n.at(1).value)
         assertEquals(102, n.at(2).value)
     }
+
     @Test
     fun deleteDups() {
         n.append(LinkedListNode02(101))
-        n.append(LinkedListNode02(100))
-        n.append(LinkedListNode02(102))
-
-        // n.print() // debug
-        n.deleteDups()
-
-        // n.print() // debug
-        assertEquals(3, n.length())
-        assertEquals(100, n.at(0).value)
-        assertEquals(101, n.at(1).value)
-        assertEquals(102, n.at(2).value)
-    }
-
-    @Test
-    fun deleteDups_Last() {
         n.append(LinkedListNode02(101))
         n.append(LinkedListNode02(102))
         n.append(LinkedListNode02(100))
