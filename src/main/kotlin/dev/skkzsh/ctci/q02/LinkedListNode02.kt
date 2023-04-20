@@ -4,7 +4,8 @@ import dev.skkzsh.dsa.linkedlist.TailDoublyLinkedListNode
 
 class LinkedListNode02(value: Int) : TailDoublyLinkedListNode(value) {
 
-    fun deleteDupsHash() {
+    // O(n)
+    fun deleteDupsWithHash() {
         val set: MutableSet<Int> = mutableSetOf()
 
         var n: TailDoublyLinkedListNode? = this
@@ -20,6 +21,7 @@ class LinkedListNode02(value: Int) : TailDoublyLinkedListNode(value) {
         }
     }
 
+    // O(n^2)
     fun deleteDups() {
         var n: TailDoublyLinkedListNode? = this
 

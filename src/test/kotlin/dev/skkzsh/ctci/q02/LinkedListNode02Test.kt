@@ -7,14 +7,14 @@ class LinkedListNode02Test {
     private val n = LinkedListNode02(100)
 
     @Test
-    fun deleteDupsHash() {
+    fun deleteDupsWithHash() {
         n.append(LinkedListNode02(101))
         n.append(LinkedListNode02(101))
         n.append(LinkedListNode02(102))
         n.append(LinkedListNode02(100))
 
         // n.print() // debug
-        n.deleteDupsHash()
+        n.deleteDupsWithHash()
 
         // n.print() // debug
         assertEquals(3, n.length())
