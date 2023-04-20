@@ -1,26 +1,22 @@
 package dev.skkzsh.ctci.q02
 
-import dev.skkzsh.dsa.linkedlist.TailLinkedListNode
+import dev.skkzsh.dsa.linkedlist.TailDoublyLinkedListNode
 
-class LinkedListNode02(value: Int) : TailLinkedListNode(value) {
+class LinkedListNode02(value: Int) : TailDoublyLinkedListNode(value) {
 
     fun deleteDups() {
         val set: MutableSet<Int> = mutableSetOf()
 
-        var n: TailLinkedListNode = this
-        set.add(n.value)
-//        println(set)
+        var n: TailDoublyLinkedListNode? = this
 
-        // FIXME: 境界値 (last)
-        while (n.next != null) {
-            println(set)
-            if (set.contains(n.next!!.value)) {
-                n.next = n.next!!.next
-                length--
+        while (n != null) {
+            if (set.contains(n.value)) {
+                delete(n)
             } else {
-                set.add(n.next!!.value)
+                set.add(n.value)
             }
-            n = n.next!!
+            // println(set) // debug
+            n = n.next
         }
     }
 }

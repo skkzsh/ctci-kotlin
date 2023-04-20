@@ -9,34 +9,33 @@ class LinkedListNode02Test {
 
     @Test
     fun deleteDups() {
-        n.append(101)
-        n.append(100)
-        n.append(102)
+        n.append(LinkedListNode02(101))
+        n.append(LinkedListNode02(100))
+        n.append(LinkedListNode02(102))
 
         // n.print() // debug
         n.deleteDups()
 
-        n.print() // debug
+        // n.print() // debug
         assertEquals(3, n.length())
-        assertEquals(100, n.at(0))
-        assertEquals(101, n.at(1))
-        assertEquals(102, n.at(2))
+        assertEquals(100, n.at(0).value)
+        assertEquals(101, n.at(1).value)
+        assertEquals(102, n.at(2).value)
     }
 
-    @Ignore
     @Test
     fun deleteDups_last() {
-        n.append(101)
-        n.append(102)
-        n.append(100)
+        n.append(LinkedListNode02(101))
+        n.append(LinkedListNode02(102))
+        n.append(LinkedListNode02(100))
 
         // n.print() // debug
         n.deleteDups()
 
-        n.print() // debug
+        // n.print() // debug
         assertEquals(3, n.length())
-        assertEquals(100, n.at(0))
-        assertEquals(101, n.at(1))
-        assertEquals(102, n.at(2))
+        assertEquals(100, n.at(0).value)
+        assertEquals(101, n.at(1).value)
+        assertEquals(102, n.at(2).value)
     }
 }
