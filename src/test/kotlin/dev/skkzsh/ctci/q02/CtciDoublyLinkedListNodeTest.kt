@@ -1,19 +1,24 @@
 package dev.skkzsh.ctci.q02
 
+import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
-class LinkedListNode02Test {
-    private val n = LinkedListNode02(100)
+class CtciDoublyLinkedListNodeTest {
+    private val n = CtciDoublyLinkedListNode(100)
+
+    @BeforeEach
+    fun setUp() {
+        n.append(CtciDoublyLinkedListNode(101))
+        n.append(CtciDoublyLinkedListNode(101))
+        n.append(CtciDoublyLinkedListNode(102))
+        n.append(CtciDoublyLinkedListNode(100))
+
+        // n.print() // debug
+    }
 
     @Test
     fun deleteDupsWithHash() {
-        n.append(LinkedListNode02(101))
-        n.append(LinkedListNode02(101))
-        n.append(LinkedListNode02(102))
-        n.append(LinkedListNode02(100))
-
-        // n.print() // debug
         n.deleteDupsWithHash()
 
         // n.print() // debug
@@ -25,12 +30,6 @@ class LinkedListNode02Test {
 
     @Test
     fun deleteDups() {
-        n.append(LinkedListNode02(101))
-        n.append(LinkedListNode02(101))
-        n.append(LinkedListNode02(102))
-        n.append(LinkedListNode02(100))
-
-        // n.print() // debug
         n.deleteDups()
 
         // n.print() // debug
