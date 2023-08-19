@@ -11,12 +11,12 @@ class CtciLinkedListNode(value: Int) : TailLinkedListNode(value) {
         return indexFromBack(this, num).second!!
     }
 
-    private fun indexFromBack(head: TailLinkedListNode, num: Int): Pair<Int, Int?> {
-        if (head.next == null) {
-            return Pair(0, null)
+    private fun indexFromBack(head: TailLinkedListNode?, num: Int): Pair<Int, Int?> {
+        if (head == null) {
+            return Pair(-1, null)
         }
 
-        val next = indexFromBack(head.next!!, num)
+        val next = indexFromBack(head.next, num)
         val index = next.first + 1
 
         if (index == num) {
