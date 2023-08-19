@@ -20,6 +20,7 @@ repositories {
 dependencies {
     implementation("dev.skkzsh:dsa:1.0-SNAPSHOT")
     testImplementation(kotlin("test"))
+    testImplementation("org.junit.jupiter:junit-jupiter-params:5.9.3")
 }
 
 // 毎回最新を取得 (キャッシュを使わない)
