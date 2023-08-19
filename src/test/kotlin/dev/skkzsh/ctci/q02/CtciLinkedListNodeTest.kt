@@ -20,10 +20,10 @@ class CtciLinkedListNodeTest {
 
     @Test
     fun atBack() {
-        assertEquals(104, n.atBack(1))
-        assertEquals(103, n.atBack(2))
-        assertEquals(102, n.atBack(3))
-        assertEquals(101, n.atBack(4))
-        assertEquals(100, n.atBack(5))
+        assertEquals(104, n.atBack(0))
+        assertEquals(103, n.atBack(1))
+        assertEquals(102, n.atBack(2))
+        assertEquals(101, n.atBack(3))
+        assertEquals(100, n.atBack(4))
     }
 }
