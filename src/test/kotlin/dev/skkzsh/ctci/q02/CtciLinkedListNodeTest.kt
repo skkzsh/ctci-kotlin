@@ -43,4 +43,16 @@ class CtciLinkedListNodeTest {
     fun atBackRecursively(expected: Int, num: Int) {
         assertEquals(expected, n.atBackRecursively(num))
     }
+
+    @ParameterizedTest
+    @CsvSource(
+        "104, 0",
+        "103, 1",
+        "102, 2",
+        "101, 3",
+        "100, 4",
+    )
+    fun atBackByRuner(expected: Int, num: Int) {
+        assertEquals(expected, n.atBackByRunner(num))
+    }
 }

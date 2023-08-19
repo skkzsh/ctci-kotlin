@@ -24,4 +24,19 @@ class CtciLinkedListNode(value: Int) : TailLinkedListNode(value) {
         }
         return Pair(index, next.second)
     }
+
+    fun atBackByRunner(num: Int): Int {
+        var p: TailLinkedListNode = this
+        for (i in 0 until num) {
+            p = p.next!!
+        }
+
+        var a: TailLinkedListNode = this
+        while (p.next != null) {
+            p = p.next!!
+            a = a.next!!
+        }
+
+        return a.value
+    }
 }
