@@ -8,15 +8,15 @@ class CtciLinkedListNode(value: Int) : TailLinkedListNode(value) {
     }
 
     fun atBackRecursively(num: Int): Int {
-        return indexFromBack(this, num).second!!
+        return atBackRecursively(num, this).second!!
     }
 
-    private fun indexFromBack(head: TailLinkedListNode?, num: Int): Pair<Int, Int?> {
+    private fun atBackRecursively(num: Int, head: TailLinkedListNode?): Pair<Int, Int?> {
         if (head == null) {
             return Pair(-1, null)
         }
 
-        val next = indexFromBack(head.next, num)
+        val next = atBackRecursively(num, head.next)
         val index = next.first + 1
 
         if (index == num) {
