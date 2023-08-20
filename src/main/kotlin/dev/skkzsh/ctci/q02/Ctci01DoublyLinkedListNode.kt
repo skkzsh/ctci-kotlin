@@ -2,7 +2,7 @@ package dev.skkzsh.ctci.q02
 
 import dev.skkzsh.dsa.linkedlist.TailDoublyLinkedListNode
 
-class CtciDoublyLinkedListNode(value: Int) : TailDoublyLinkedListNode(value) {
+class Ctci01DoublyLinkedListNode(value: Int) : TailDoublyLinkedListNode(value) {
 
     // O(n)
     fun deleteDupsWithHash() {

@@ -4,15 +4,15 @@ import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
-class CtciDoublyLinkedListNodeTest {
-    private val n = CtciDoublyLinkedListNode(100)
+class Ctci01DoublyLinkedListNodeTest {
+    private val n = Ctci01DoublyLinkedListNode(100)
 
     @BeforeEach
     fun setUp() {
-        n.append(CtciDoublyLinkedListNode(101))
-        n.append(CtciDoublyLinkedListNode(101))
-        n.append(CtciDoublyLinkedListNode(102))
-        n.append(CtciDoublyLinkedListNode(100))
+        n.append(Ctci01DoublyLinkedListNode(101))
+        n.append(Ctci01DoublyLinkedListNode(101))
+        n.append(Ctci01DoublyLinkedListNode(102))
+        n.append(Ctci01DoublyLinkedListNode(100))
 
         // n.print() // debug
     }

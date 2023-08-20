@@ -2,13 +2,11 @@ package dev.skkzsh.ctci.q02
 
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.params.ParameterizedTest
-import org.junit.jupiter.params.provider.Arguments.arguments
 import org.junit.jupiter.params.provider.CsvSource
-import org.junit.jupiter.params.provider.MethodSource
 import kotlin.test.assertEquals
 
-class CtciLinkedListNodeTest {
-    private val n = CtciLinkedListNode(100)
+class Ctci02LinkedListNodeTest {
+    private val n = Ctci02LinkedListNode(100)
 
     @BeforeEach
     fun setUp() {
